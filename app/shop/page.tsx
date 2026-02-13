@@ -10,9 +10,9 @@ export default function ShopPage() {
   return (
     <Container>
       <div className="py-10">
-        <h1 className="text-2xl font-semibold tracking-tight">Shop</h1>
-        <p className="mt-2 text-sm text-neutral-600">
-          Borse all’uncinetto (pezzi unici). Prezzo comprensivo di spedizione in Italia.
+        <h1 className="text-2xl font-semibold tracking-tight text-brand-sage">Shop</h1>
+        <p className="mt-2 text-sm text-brand-sage/70">
+          Borse all&apos;uncinetto (pezzi unici). Prezzo comprensivo di spedizione in Italia.
         </p>
 
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

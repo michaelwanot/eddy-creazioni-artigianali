@@ -7,7 +7,17 @@ export default {
     "./lib/**/*.{ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          beige: "#D9CEEB",
+          cream: "#F6EEE1",
+          pink: "#F1D6D0",
+          sage: "#6F8469",
+          "sage-light": "#86AC8D",
+        },
+      },
+    },
   },
   plugins: [],
 } satisfies Config;

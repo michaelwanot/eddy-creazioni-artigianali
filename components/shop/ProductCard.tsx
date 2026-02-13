@@ -9,7 +9,7 @@ export function ProductCard({ product }: { product: Product }) {
       className="group no-underline"
       aria-label={product.name}
     >
-      <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+      <div className="overflow-hidden rounded-2xl border border-brand-beige bg-white transition-shadow hover:shadow-lg">
         <div className="relative aspect-[4/3] w-full">
           <Image
             src={product.images[0] ?? "/products/placeholder-1.jpg"}
@@ -20,21 +20,21 @@ export function ProductCard({ product }: { product: Product }) {
             priority={false}
           />
           {product.isSoldOut ? (
-            <div className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-neutral-900 backdrop-blur">
+            <div className="absolute left-3 top-3 rounded-full bg-brand-pink/90 px-3 py-1 text-xs font-medium text-brand-sage backdrop-blur">
               Esaurito
             </div>
           ) : null}
         </div>
         <div className="p-4">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="text-sm font-semibold leading-snug text-neutral-900">
+            <h3 className="text-sm font-semibold leading-snug text-brand-sage">
               {product.name}
             </h3>
-            <div className="text-sm text-neutral-700">
+            <div className="text-sm text-brand-sage/80 font-medium">
               {formatPriceEUR(product.priceCents)}
             </div>
           </div>
-          <p className="mt-2 line-clamp-2 text-sm text-neutral-600">
+          <p className="mt-2 line-clamp-2 text-sm text-brand-sage/70">
             {product.description}
           </p>
         </div>
