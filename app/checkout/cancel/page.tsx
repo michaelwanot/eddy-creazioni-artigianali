@@ -8,9 +8,9 @@ export default function CancelPage() {
   return (
     <Container>
       <div className="py-14">
-        <div className="mx-auto max-w-2xl rounded-3xl border border-neutral-200 p-8">
+        <div className="mx-auto max-w-2xl rounded-3xl border border-brand-beige p-8">
           <h1 className="text-2xl font-semibold tracking-tight">Pagamento annullato</h1>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-brand-ink/70">
             Nessun addebito è stato effettuato. Puoi riprovare quando vuoi.
           </p>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/lib/site";
+import { FloatingWhatsAppButton } from "@/components/contact/FloatingWhatsAppButton";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/components/shop/CartContext";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main className="min-h-[70vh]">{children}</main>
           <Footer />
+          <FloatingWhatsAppButton />
         </CartProvider>
       </body>
     </html>

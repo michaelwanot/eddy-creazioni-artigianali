@@ -10,12 +10,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          beige: "#D9CEEB",
-          cream: "#F6EEE1",
-          pink: "#F1D6D0",
-          sage: "#6F8469",
-          "sage-light": "#86AC8D",
+          sage: "#5E6F5B",
+          terracotta: "#C97C5D",
+          ivory: "#F6F2EC",
+          beige: "#E8DFD3",
+          blush: "#E6C7C2",
+          ink: "#2A2A2A",
         },
+      },
+      boxShadow: {
+        soft: "0 10px 30px rgba(0,0,0,0.06)",
       },
     },
   },

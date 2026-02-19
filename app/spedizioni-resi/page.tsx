@@ -8,8 +8,8 @@ export default function ShippingReturnsPage() {
       <div className="py-10 max-w-3xl">
         <h1 className="text-2xl font-semibold tracking-tight">Spedizioni & Resi</h1>
 
-        <div className="mt-6 space-y-6 text-sm text-neutral-700">
-          <section className="rounded-2xl border border-neutral-200 p-5">
+        <div className="mt-6 space-y-6 text-sm text-brand-ink/70">
+          <section className="rounded-2xl border border-brand-beige p-5">
             <h2 className="text-sm font-semibold">Spedizioni</h2>
             <p className="mt-2">
               Spediamo in Italia. I prezzi indicati includono la spedizione (da confermare in base ai costi reali).
@@ -19,7 +19,7 @@ export default function ShippingReturnsPage() {
             </p>
           </section>
 
-          <section className="rounded-2xl border border-neutral-200 p-5">
+          <section className="rounded-2xl border border-brand-beige p-5">
             <h2 className="text-sm font-semibold">Resi</h2>
             <p className="mt-2">
               <span className="text-neutral-500">TODO:</span> definire la politica di reso (tempi, condizioni, costi).

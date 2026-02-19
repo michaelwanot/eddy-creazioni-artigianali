@@ -11,36 +11,47 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "borsa-001",
-    slug: "borsa-uncinetto-avorio",
-    name: "Borsa all’uncinetto Avorio",
-    priceCents: 6900,
+    id: "trecciato-rosso",
+    slug: "trecciato-rosso",
+    name: "Trecciato Rosso",
+    priceCents: 4000,
     description:
-      "Borsa all’uncinetto fatta a mano in stile elegante e minimal. Ideale per l’uso quotidiano.",
-    images: ["/products/placeholder-1.jpg"],
+      "Borsa all'uncinetto in trecciato rosso, fatta a mano. Pezzo unico, ideale per l'uso quotidiano.",
+    images: [
+      "/products/trecciato_rosso/trecciato_rosso_1.jpeg",
+      "/products/trecciato_rosso/trecciato_rosso_2.jpeg",
+      "/products/trecciato_rosso/trecciato_rosso_3.jpeg",
+    ],
     isSoldOut: false,
     details: ["Pezzo unico", "Fatta a mano", "Spedizione inclusa (Italia)"],
   },
   {
-    id: "borsa-002",
-    slug: "borsa-uncinetto-nero-notte",
-    name: "Borsa all’uncinetto Nero Notte",
-    priceCents: 7900,
+    id: "macrame",
+    slug: "macrame",
+    name: "Macramè",
+    priceCents: 4000,
     description:
-      "Linee pulite e look raffinato. Un accessorio versatile per ogni occasione.",
-    images: ["/products/placeholder-2.jpg"],
+      "Borsa in macramè con linee pulite e look raffinato. Un accessorio versatile per ogni occasione.",
+    images: [
+      "/products/macrame/macrame_1.jpeg",
+      "/products/macrame/macrame_2.jpeg",
+    ],
     isSoldOut: false,
     details: ["Pezzo unico", "Fatta a mano", "Spedizione inclusa (Italia)"],
   },
   {
-    id: "borsa-003",
-    slug: "borsa-uncinetto-sabbia",
-    name: "Borsa all’uncinetto Sabbia",
-    priceCents: 7200,
+    id: "ecofur",
+    slug: "ecofur",
+    name: "Ecofur",
+    priceCents: 4000,
     description:
-      "Tonalità neutra e texture artigianale: perfetta per la stagione primavera/estate.",
-    images: ["/products/placeholder-3.jpg"],
-    isSoldOut: true,
+      "Borsa in ecofur, tonalità neutra e texture artigianale. Perfetta per la stagione primavera/estate.",
+    images: [
+      "/products/ecofur/ecofur_1.jpeg",
+      "/products/ecofur/ecofur_2.jpeg",
+      "/products/ecofur/ecofur_3.jpeg",
+    ],
+    isSoldOut: false,
     details: ["Pezzo unico", "Fatta a mano", "Spedizione inclusa (Italia)"],
   },
 ];

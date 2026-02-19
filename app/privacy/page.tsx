@@ -7,7 +7,7 @@ export default function Page() {
     <Container>
       <div className="py-10 max-w-3xl">
         <h1 className="text-2xl font-semibold tracking-tight">Privacy Policy</h1>
-        <div className="mt-6 space-y-4 text-sm text-neutral-700">
+        <div className="mt-6 space-y-4 text-sm text-brand-ink/70">
           <p>
             <span className="text-neutral-500">Template:</span> questa pagina è un segnaposto.
             Va completata con i dati del titolare del sito, riferimenti GDPR e dettagli del trattamento.

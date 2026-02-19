@@ -27,7 +27,7 @@ export default function CartPage() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">Carrello</h1>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-brand-ink/70">
               Pagamento unico con Stripe. Prezzi comprensivi di spedizione in Italia.
             </p>
           </div>
@@ -37,21 +37,21 @@ export default function CartPage() {
         </div>
 
         {lines.length === 0 ? (
-          <div className="mt-8 rounded-2xl border border-neutral-200 p-6">
-            <p className="text-neutral-700">Il carrello è vuoto.</p>
+          <div className="mt-8 rounded-2xl border border-brand-beige p-6">
+            <p className="text-brand-ink/70">Il carrello è vuoto.</p>
             <div className="mt-4">
               <Button href="/shop">Vai allo shop</Button>
             </div>
           </div>
         ) : (
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            <div className="lg:col-span-2 rounded-2xl border border-neutral-200">
+            <div className="lg:col-span-2 rounded-2xl border border-brand-beige">
               <div className="divide-y divide-neutral-200">
                 {lines.map(({ product }) => (
                   <div key={product.id} className="flex items-start justify-between gap-4 p-4">
                     <div>
                       <div className="text-sm font-semibold">{product.name}</div>
-                      <div className="mt-1 text-sm text-neutral-600">
+                      <div className="mt-1 text-sm text-brand-ink/70">
                         {formatPriceEUR(product.priceCents)}
                       </div>
                       {product.isSoldOut ? (
@@ -62,7 +62,7 @@ export default function CartPage() {
                       ) : null}
                     </div>
                     <button
-                      className="text-sm text-neutral-600 hover:underline"
+                      className="text-sm text-brand-ink/70 hover:underline"
                       onClick={() => remove(product.id)}
                     >
                       Rimuovi
@@ -72,10 +72,10 @@ export default function CartPage() {
               </div>
             </div>
 
-            <div className="h-fit rounded-2xl border border-neutral-200 p-4">
+            <div className="h-fit rounded-2xl border border-brand-beige p-4">
               <div className="text-sm font-medium">Riepilogo</div>
               <div className="mt-3 flex items-center justify-between text-sm">
-                <span className="text-neutral-600">Totale</span>
+                <span className="text-brand-ink/70">Totale</span>
                 <span className="font-semibold">{formatPriceEUR(totalCents)}</span>
               </div>
               <div className="mt-4 flex flex-col gap-3">

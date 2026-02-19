@@ -8,10 +8,10 @@ type Props = LinkProps | ButtonProps;
 
 export function Button(props: Props) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition border";
+    "inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage/40";
   const variants = {
     primary: "bg-brand-sage text-white border-brand-sage hover:bg-brand-sage-light",
-    ghost: "bg-white text-brand-sage border-brand-beige hover:bg-brand-beige",
+    ghost: "bg-white/60 text-brand-sage border-brand-beige hover:bg-white/80 backdrop-blur",
   } as const;
   const variant: "primary" | "ghost" = props.variant ?? "primary";
   const className = clsx(base, variants[variant], props.className);

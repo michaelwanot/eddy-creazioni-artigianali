@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  @apply bg-brand-cream text-neutral-900 antialiased;
+  @apply bg-brand-ivory text-brand-ink antialiased;
 }
 
 a { @apply underline-offset-4; }

@@ -5,6 +5,7 @@ export const site = {
   locale: "it-IT",
   currency: "EUR",
   social: {
-    tiktokUrl: "https://www.tiktok.com/@eddycreazioniartigianali", // TODO: sostituisci con il link reale
+    instagramUrl: "https://www.instagram.com/eddy_handmade/",
+    whatsappNumber: "393331234567", // numero con prefisso Italia, senza +
   },
 } as const;
