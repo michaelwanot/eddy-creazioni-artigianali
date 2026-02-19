@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/shop/ProductCard";
-import { site } from "@/lib/site";
 
 export default function HomePage() {
   const newArrivals = products.slice(0, 6);
@@ -12,72 +10,57 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="border-b border-brand-beige bg-brand-ivory">
-        <Container>
-          <div className="grid items-center gap-10 py-10 md:grid-cols-2 md:py-16">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-brand-sage">
-                Borse fatte a mano • Pezzi unici
-              </p>
-              <h1 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-                Pezzi unici.
-                <br />
-                Fatti a mano.
-              </h1>
-              <p className="mt-4 text-brand-ink/70">
-                Borse all’uncinetto create una alla volta, con cura. Spedizione inclusa in Italia.
-              </p>
+      {/* Hero — like hero.png: full-width image, headline + CTA overlay */}
+      <section className="relative min-h-[85vh] overflow-hidden border-b border-brand-beige bg-brand-blush/30">
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent"
+          aria-hidden
+        />
+        <div className="absolute inset-0">
+          <Image
+            src="/hero.png"
+            alt=""
+            fill
+            className="object-cover object-top"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-brand-ink/50 via-transparent to-transparent"
+          aria-hidden
+        />
+        <div className="relative flex min-h-[85vh] flex-col items-center justify-end px-4 pb-12 pt-24 text-center sm:pb-16">
+          <h1 className="font-serif text-3xl font-medium tracking-tight text-white drop-shadow-md md:text-4xl lg:text-5xl">
+            Morbidezza che si fa stile
+          </h1>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button href="/shop">Scopri lo shop</Button>
-                <Button href="/chi-sono" variant="ghost">Chi sono</Button>
-              </div>
-
-              <div className="mt-8 rounded-2xl border border-brand-beige bg-white/60 p-4 backdrop-blur">
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <div className="text-sm font-medium text-brand-ink">Seguici su Instagram</div>
-                    <div className="mt-1 text-xs text-brand-ink/70">
-                      Nuove borse, dettagli e aggiornamenti.
-                    </div>
-                  </div>
-                  <a
-                    href={site.social.instagramUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-brand-sage px-4 py-2 text-sm font-medium text-brand-ivory no-underline transition hover:opacity-95"
-                  >
-                    Instagram <span aria-hidden>↗</span>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="relative mx-auto w-full max-w-[520px]">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-brand-beige bg-white shadow-soft">
-                <Image
-                  src="/hero.jpg"
-                  alt="Borse all’uncinetto"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 520px"
-                />
-              </div>
-              <div className="absolute -bottom-5 left-6 right-6 hidden rounded-2xl border border-brand-beige bg-white/80 p-4 text-sm text-brand-ink shadow-soft backdrop-blur md:block">
-                <div className="flex items-center justify-between">
-                  <span className="font-medium">Spedizione inclusa</span>
-                  <span className="text-brand-terracotta">Italia</span>
-                </div>
-                <div className="mt-1 text-xs text-brand-ink/70">
-                  Pagamento sicuro con carta (Stripe).
-                </div>
-              </div>
+          <div className="mt-6 w-full max-w-lg rounded-2xl border border-white/20 bg-white/90 p-6 shadow-xl backdrop-blur sm:p-8">
+            <p className="text-lg font-semibold tracking-tight text-brand-ink md:text-xl">
+              Pezzi unici. Fatti a mano.
+            </p>
+            <p className="mt-2 text-sm text-brand-ink/80">
+              Borse all&apos;uncinetto create una alla volta, con cura. Spedizione inclusa in Italia.
+            </p>
+            <p className="mt-4 text-sm font-medium text-brand-sage">
+              Vuoi una borsa su misura? Scrivici e la realizziamo per te.
+            </p>
+            <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <Link
+                href="/shop"
+                className="inline-flex w-full justify-center rounded-2xl bg-brand-sage px-6 py-3 text-sm font-medium text-white no-underline transition hover:bg-brand-sage/90 sm:w-auto"
+              >
+                Scopri la collezione
+              </Link>
+              <Link
+                href="/contatti"
+                className="inline-flex w-full justify-center rounded-2xl border-2 border-brand-sage bg-transparent px-6 py-3 text-sm font-medium text-brand-sage no-underline transition hover:bg-brand-sage/10 sm:w-auto"
+              >
+                Richiedi una borsa su misura
+              </Link>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* New arrivals */}
